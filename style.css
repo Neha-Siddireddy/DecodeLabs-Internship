@@ -1,0 +1,293 @@
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FFF8E7;
+    color:#2D2D2D;
+    line-height:1.6;
+}
+/* =========================
+   NAVBAR
+========================= */
+header{
+    background:#6F4E37;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+}
+.logo{
+    color:white;
+    font-size:1.5rem;
+    font-weight:600;
+}
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+.nav-links a:hover{
+    color:#D4A373;
+}
+.hamburger{
+    display:none;
+    color:white;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    padding:50px 8%;
+}
+.hero-text{
+    flex:1;
+}
+.hero-text h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+.hero-text p{
+    margin-bottom:25px;
+}
+.btn{
+    display:inline-block;
+    background:#6F4E37;
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:5px;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#D4A373;
+}
+.hero-image{
+    flex:1;
+}
+.hero-image img{
+    width:100%;
+    max-width:450px;
+    border-radius:10px;
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+.about{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    padding:80px 8%;
+}
+.about-image,
+.about-text{
+    flex:1;
+}
+.about-image img{
+    width:100%;
+    border-radius:10px;
+}
+.about-text h2{
+    margin-bottom:20px;
+}
+/* =========================
+   MENU SECTION
+========================= */
+.menu{
+    padding:80px 8%;
+    text-align:center;
+}
+.menu h2{
+    margin-bottom:40px;
+}
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+.menu-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.menu-card:hover{
+    transform:translateY(-5px);
+}
+.menu-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+.menu-card h3{
+    margin-bottom:10px;
+}
+.menu-card span{
+    display:block;
+    margin-top:10px;
+    color:#6F4E37;
+    font-weight:bold;
+}
+/* =========================
+   FEATURES
+========================= */
+.features{
+    padding:80px 8%;
+    text-align:center;
+}
+.features h2{
+    margin-bottom:40px;
+}
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+.feature-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.feature-card:hover{
+    background:#6F4E37;
+    color:white;
+}
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials{
+    padding:80px 8%;
+    text-align:center;
+}
+.testimonials h2{
+    margin-bottom:40px;
+}
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+.testimonial-card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+/* =========================
+   CONTACT
+========================= */
+.contact{
+    padding:80px 8%;
+    text-align:center;
+}
+.contact h2{
+    margin-bottom:30px;
+}
+form{
+    max-width:600px;
+    margin:auto;
+}
+form input,
+form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-family:inherit;
+}
+form textarea{
+    height:120px;
+    resize:none;
+}
+form button{
+    background:#6F4E37;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    cursor:pointer;
+    border-radius:5px;
+}
+form button:hover{
+    background:#D4A373;
+}
+/* =========================
+   FOOTER
+========================= */
+footer{
+    background:#6F4E37;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+footer p{
+    margin-top:10px;
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        right:0;
+        background:#6F4E37;
+        width:200px;
+        padding:20px;
+    }
+    .nav-links.active{
+        display:flex;
+    }
+    .hamburger{
+        display:block;
+    }
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .about{
+        flex-direction:column;
+        text-align:center;
+    }
+    .menu-grid,
+    .feature-grid,
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+    .hero-text h1{
+        font-size:2.2rem;
+    }
+}
